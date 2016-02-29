@@ -62,6 +62,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.json', '.css', '.html'],
     modulesDirectories: ['node_modules', 'bower_components'],
     alias: {
+      'app.css'                        : stylesRoot    + 'app.css',
       'bootstrap.min.css'              : vendorScripts + 'bootstrap/css/bootstrap.min.css',
       'bootstrap.theme.min.css'        : vendorScripts + 'bootstrap/css/bootstrap-theme.min.css',
       'bootstrap'                      : vendorScripts + 'bootstrap/js/bootstrap.js',

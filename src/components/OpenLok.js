@@ -46,8 +46,8 @@ export default class OpenLok extends Component {
   render(props) {
     return (
       <div className="panel panel-default">
-       <div className="panel-heading">
-        <div className="text-center h3">Welcome to OpenLok!</div>
+        <div className="panel-heading">
+          <div className="text-center h3">Welcome to OpenLok!</div>
         </div>
           <div className="panel-body">
             <div className="container">
@@ -56,24 +56,30 @@ export default class OpenLok extends Component {
                    <img src="../../content/images/ICE3_small.png"></img>
                 </div>
                 <div className="border col-xs-4">
-                  <DateTimePicker
-                    defaultValue={this.state.dateFrom}
-                    onChange={this.onDateChange.bind(this, 'From')}
-                  />
-                  <DateTimePicker
-                    defaultValue={this.state.dateTo}
-                    onChange={this.onDateChange.bind(this, 'To')}
-                  />
+                    <div className="block-padding">
+                      <DateTimePicker
+                        defaultValue={this.state.dateFrom}
+                        onChange={this.onDateChange.bind(this, 'From')}
+                      />
+                    </div>
+                    <div className="block-padding">
+                      <DateTimePicker
+                        defaultValue={this.state.dateTo}
+                        onChange={this.onDateChange.bind(this, 'To')}
+                      />
+                    </div>
+                    <div className="input-group">
+                    <span className="input-group-btn">
+                      <button onClick={this.search} className="btn btn-default" type="button">Search</button>
+                    </span>
+                    <input onInput={this.onLocationInput} type="text" className="form-control" placeholder="Search for City..."></input>
+                  </div>
+                  </div>
                 </div>
               </div>
-            </div>
+
           </div>
-        <div className="input-group">
-          <span className="input-group-btn">
-            <button onClick={this.search} className="btn btn-default" type="button">Search</button>
-          </span>
-          <input onInput={this.onLocationInput} type="text" className="form-control" placeholder="Search for..."></input>
-        </div>
+
         <div className="panel-footer"></div>
       </div>
     );
