@@ -38,11 +38,11 @@ https://open-api.bahn.de/bin/rest.exe/location.name?authKey=YOUR_AUTH_KEY&lang=d
 
 Finally, you'd receive a plain JSON-structure containing the location data. The JSON-structure remains unchanged as Hapi.js only forwards the responses back to the client.
 
-##### Screenshot (Client)
+##### Client
 
-<img src="http://fs5.directupload.net/images/160229/5vamm6va.png"/>
+<img src="http://fs5.directupload.net/images/160229/tlpumyvq.png"/>
 
-##### Screenshot (Backend)
+##### Local API Server
 
 <img src="http://fs5.directupload.net/images/160229/8vknm8za.png"/>
 
