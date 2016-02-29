@@ -72,7 +72,7 @@ API-Server listens on <a href="http://localhost:3000/">http://localhost:3000/</a
 
 ##### FAQ
 
-- What does 'BahnService' mean?
+- **What do 'BahnService' and 'OpenBahn' mean?**
 
 "Bahn" is a German word and heavily context-dependent. In this case it means 'Train'.
 
@@ -87,6 +87,16 @@ and many others.
 Building compound words is very easy in German. :speech_balloon:
 
 You can learn it <a href="https://www.goethe.de/en/spr/kup.html">here</a>, for example :smile:
+
+- **Where to get the API-Key?**
+
+To access the DB-API you'll need an API-Key. To get one use this email:  *dbopendata @ deutschebahn.com*
+
+Then put it into *authKey* in *BahnService.js*
+
+<img src="http://fs5.directupload.net/images/160229/ec5yixz7.png"/>
+
+
 
 #### License
 
