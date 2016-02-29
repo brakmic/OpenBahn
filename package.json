@@ -4,7 +4,8 @@
   "description": "Web Client for Deutsche Bahn API",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "client": "babel-node index.js",
+    "api": "babel-node api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

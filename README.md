@@ -16,7 +16,7 @@ The API Descriptions can be found <a href="http://data.deutschebahn.com/apis/fah
 
 ##### Structure
 
-The Frontend is built with <a href="https://facebook.github.io/react/">React.js</a> and supports hot-reloading via <a href="https://webpack.github.io/">WebPack</a>. More info regarding hot-reloading of React components can be found <a href="https://gaearon.github.io/react-hot-loader/getstarted/">here</a>. 
+The Frontend is built with <a href="https://facebook.github.io/react/">React.js</a> and supports hot-reloading via <a href="https://webpack.github.io/">WebPack</a>. More info regarding hot-reloading of React components can be found <a href="https://gaearon.github.io/react-hot-loader/getstarted/">here</a>.
 
 The Backend is based on <a href="http://hapijs.com/">Hapi.js</a> which is my favorite node server. The Frontend uses this backend to avoid problems with CORS. Therefore, the App executes no direct calls against the real DB-API but instead against Hapi.js that is configured *to accept CORS*.
 
@@ -24,14 +24,14 @@ There's a special class called *BahnService** that's being used by both client a
 
 This may sound unnecessarily complex but the strategy is rather simple: *a Client only wants to have a direct access to 'some API' without fiddling around with CORS etc.* Therefore, Hapi.js takes care of providing us an easy to use, **RESTful API** that returns plain JSONs.
 
-The advantage is obvious: you can mock and test your API without dealing with CORS or any other implementation details. 
+The advantage is obvious: you can mock and test your API without dealing with CORS or any other implementation details.
 
-For example, the client could send a GET request querying the location 'Cologne' 
+For example, the client could send a GET request querying the location 'Cologne'
 
 ``` shell
-http://localhost:3000/locations/Cologne 
+http://localhost:3000/locations/Cologne
 ```
-which on Hapi.js side would then be translated into a server-side GET request against 
+which on Hapi.js side would then be translated into a server-side GET request against
 ``` shell
 https://open-api.bahn.de/bin/rest.exe/location.name?authKey=YOUR_AUTH_KEY&lang=de&input=Cologne&format=json
 ```
@@ -50,19 +50,36 @@ Finally, you'd receive a plain JSON-structure containing the location data. The 
 
 The Client is rather primitive as it only contains a very bare-bone React component and a few Bootstrap elements (button, input, panel etc.).
 
-The Server implements only the <a href="http://data.deutschebahn.com/apis/fahrplan/">Location.name</a> API but soon they'll be more of them. 
+The Server implements only the <a href="http://data.deutschebahn.com/apis/fahrplan/">Location.name</a> API but soon they'll be more of them.
+
+##### Building & Running
+
+*Client*
+
+``` shell
+npm run client
+```
+
+Client is located at <a href="http://localhost:8080/">http://localhost:8080/</a>
+
+*Local API*
+
+``` shell
+npm run api
+```
+
+API-Server listens on <a href="http://localhost:3000/">http://localhost:3000/</a>
 
 ##### FAQ
 
-
 - What does 'BahnService' mean?
 
-"Bahn" is a German word and heavily context-dependent. In this case it means 'Train'. 
+"Bahn" is a German word and heavily context-dependent. In this case it means 'Train'.
 
 However, you can find it in a number of different locations, for example:
 
 - Auto*bahn*    = motorway
-- Flug*bahn*    = trajectory 
+- Flug*bahn*    = trajectory
 - Straßen*bahn* = tram (Br.), streetcar (Am.)
 
 and many others.
