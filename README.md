@@ -106,4 +106,4 @@ Then put it into *authKey* in *BahnService.js*
 
 <a href="https://github.com/brakmic/OpenLok/blob/master/LICENSE">MIT</a>
 
-Deutsche Bahn® is a registered trademark of **Deutsche Bahn AG**. in Germany and/or other countries.
+Deutsche Bahn® is a registered trademark of **Deutsche Bahn AG** in Germany and/or other countries.
