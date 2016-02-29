@@ -1,4 +1,4 @@
-### OpenBahn :train:
+### OpenLok :train:
 
 <p align="center">
   <img src="http://fs5.directupload.net/images/160229/fg2frgk9.png" title="Germany's Rail Network"/>
@@ -72,9 +72,9 @@ API-Server listens on <a href="http://localhost:3000/">http://localhost:3000/</a
 
 ##### FAQ
 
-- **What do 'BahnService' and 'OpenBahn' mean?**
+- **What do 'BahnService' and 'OpenLok' mean?**
 
-"Bahn" is a German word and heavily context-dependent. In this case it means 'Train'.
+*Bahn* is a German word and heavily context-dependent. In this case it means 'Train'.
 
 However, you can find it in a number of different locations, for example:
 
@@ -83,6 +83,10 @@ However, you can find it in a number of different locations, for example:
 - Straßen*bahn* = tram (Br.), streetcar (Am.)
 
 and many others.
+
+*Lok* is an abbreviation of 'Lokomotive' which means `locomotive`.
+
+There's also a similar English abbreviation `loco`.
 
 Building compound words is very easy in German. :speech_balloon:
 
@@ -100,6 +104,6 @@ Then put it into *authKey* in *BahnService.js*
 
 #### License
 
-<a href="https://github.com/brakmic/OpenBahn/blob/master/LICENSE">MIT</a>
+<a href="https://github.com/brakmic/OpenLok/blob/master/LICENSE">MIT</a>
 
 Deutsche Bahn® is a registered trademark of **Deutsche Bahn AG**. in Germany and/or other countries.
