@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class OpenBahn extends Component {
+export default class OpenLok extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -33,14 +33,14 @@ export default class OpenBahn extends Component {
   render(props) {
     return (
       <div className="panel panel-default">
-       <div className="panel-heading">OpenBahn</div>
+       <div className="panel-heading">OpenLok</div>
         <div className="panel-body">
-          Willkommen bei OpenBahn!
+          Welcome to OpenLok!
           <img src="../../content/images/ICE3_small.png"></img>
         </div>
         <div className="input-group">
           <span className="input-group-btn">
-            <button onClick={this.search} className="btn btn-default" type="button">Suchen!</button>
+            <button onClick={this.search} className="btn btn-default" type="button">Search</button>
           </span>
           <input onInput={this.onLocationInput} type="text" className="form-control" placeholder="Search for..."></input>
         </div>

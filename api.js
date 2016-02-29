@@ -7,7 +7,7 @@ require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
 
-const server = new Hapi.Server();
+const server  = new Hapi.Server();
 const service = new BahnService({ useLocalApi: false });
 
 server.connection({ port: 3000, routes: { cors: true }  });

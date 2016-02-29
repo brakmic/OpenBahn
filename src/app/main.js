@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import OpenBahn from './OpenBahn';
+import OpenLok from './OpenLok';
 import BahnService from './services/BahnService';
 import 'bootstrap.min.css';
 import 'bootstrap.theme.min.css';
@@ -13,4 +13,4 @@ const bahnService = new BahnService({
                                       apiServer: 'http://localhost:3000/'
                                     });
 
-ReactDOM.render(<OpenBahn service={bahnService} />, document.getElementById('app'));
+ReactDOM.render(<OpenLok service={bahnService} />, document.getElementById('app'));
