@@ -1,0 +1,52 @@
+import React, { Component } from 'react';
+
+export default class OpenBahn extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      service : props.service,
+      location: '',
+      data: 'no data'
+    }
+    this.search = this.search.bind(this);
+    this.onLocationInput = this.onLocationInput.bind(this);
+  }
+  componentDidMount(){
+    console.log(`[SERVICE] ${this.props.service.name} loaded`);
+  }
+  search(){
+    let self = this;
+    console.log(`[SEARCHING] ${this.state.location}`);
+    this.state.service.getLocations(this.state.location)
+                .then(r => r.json())
+                .then(data => {
+                  console.log(`[DATA] ${JSON.stringify(data, null, 4)}`);
+
+                })
+                .catch(err => console.log(JSON.stringify(err, null, 4)));
+  }
+  onLocationInput(e) {
+    this.setState({
+      location: e.target.value
+    });
+  }
+  render(props) {
+    return (
+      <div className="panel panel-default">
+       <div className="panel-heading">OpenBahn</div>
+        <div className="panel-body">
+          Willkommen bei OpenBahn!
+          <img src="../../content/images/ICE3_small.png"></img>
+        </div>
+        <div className="input-group">
+          <span className="input-group-btn">
+            <button onClick={this.search} className="btn btn-default" type="button">Suchen!</button>
+          </span>
+          <input onInput={this.onLocationInput} type="text" className="form-control" placeholder="Search for..."></input>
+        </div>
+        <div className="well" value={this.state.data}></div>
+        <div className="panel-footer"></div>
+      </div>
+    );
+  }
+}
