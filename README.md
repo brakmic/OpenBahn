@@ -94,7 +94,7 @@ To access the DB-API you'll need an API-Key. To get one use this email:  *dbopen
 
 Then put it into *authKey* in *BahnService.js*
 
-<img src="http://fs5.directupload.net/images/160229/ec5yixz7.png"/>
+<img src="http://fs5.directupload.net/images/160229/fgxliqik.png"/>
 
 
 
