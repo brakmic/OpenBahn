@@ -7,12 +7,23 @@
   "scripts": {
     "client": "babel-node index.js",
     "api": "babel-node api.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brakmic/OpenLok.git"
+  },
+  "homepage": "https://github.com/brakmic/OpenLok#readme",
+  "bugs": {
+    "url": "https://github.com/brakmic/OpenLok/issues"
   },
   "keywords": [
-    "web",
-    "app",
-    "bahn"
+    "bahn",
+    "api",
+    "train",
+    "railway",
+    "schedule",
+    "station"
   ],
   "author": "Harris Brakmic",
   "license": "MIT",
@@ -24,6 +35,7 @@
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
     "bows": "^1.4.8",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "es6-promise": "^3.1.2",
     "eslint-plugin-react": "latest",
@@ -35,12 +47,14 @@
     "inert": "^3.2.0",
     "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
+    "mocha": "^2.4.5",
     "react-hot-loader": "latest",
     "webpack": "latest",
     "webpack-dev-server": "latest",
     "whatwg-fetch": "^0.11.0"
   },
   "dependencies": {
+    "babel-polyfill": "^6.6.0",
     "cldr": "^3.4.1",
     "cldr-data": "^28.0.3",
     "es6-promise": "^3.1.2",
