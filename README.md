@@ -80,7 +80,9 @@ API-Server listens on <a href="http://localhost:3000/">http://localhost:3000/</a
 
 ##### Testing
 
-<a href="https://mochajs.org/">Mocha</a> & <a href="http://chaijs.com/">Chai</a>
+<a href="https://mochajs.org/">Mocha</a> & <a href="http://chaijs.com/">Chai</a> with ES6.
+
+More info on testing ES6 code with Mocha <a href="http://jamesknelson.com/testing-in-es6-with-mocha-and-babel-6/">here</a>.
 
 ``` shell
 npm test
