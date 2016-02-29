@@ -40,7 +40,7 @@ Finally, you'd receive a plain JSON-structure containing the location data. The 
 
 ##### Client
 
-<img src="http://fs5.directupload.net/images/160229/s7auqjor.png"/>
+<img src="http://fs5.directupload.net/images/160229/fsa87uko.png"/>
 
 ##### Local API Server
 
