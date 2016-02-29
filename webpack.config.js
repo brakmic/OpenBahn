@@ -65,6 +65,8 @@ module.exports = {
       'metisMenu.min.css'              : stylesRoot + 'metis/metisMenu.min.css',
       'font-awesome.min.css'           : stylesRoot + 'fontawesome/css/font-awesome.min.css',
       'awesome-bootstrap-checkbox.css' : stylesRoot + 'awesome-bootstrap-checkbox.css',
+      'BahnService'                    : scriptsRoot + 'services/BahnService.js',
+      'OpenLok'                        : scriptsRoot + 'components/OpenLok.js'
 
     }
   },

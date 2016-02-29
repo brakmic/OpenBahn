@@ -1,10 +1,11 @@
-const log         = require('bows')('BahnService');
 let   baseUrl     = 'http://open-api.bahn.de/bin/rest.exe/';
 const locationApi = 'location.name';
-const authKey     = 'YOUR_API_KEY_HERE';
+const authKey     = 'YOU_API_KEY_HERE';
 const input       = 'input';
 const format      = 'format=json';
 const settings    = 'lang=de';
+import bows from 'bows';
+const log = bows('BahnService');
 
 export default class BahnService {
   constructor(props){

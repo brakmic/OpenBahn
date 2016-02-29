@@ -1,7 +1,9 @@
 import Hapi from 'hapi';
 import path from 'path';
 import Inert from 'inert';
-import BahnService from './src/app/services/BahnService';
+import BahnService from './src/services/BahnService.js';
+import bows from 'bows';
+const log = bows('API');
 
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
@@ -23,11 +25,11 @@ server.route({
       return service.getLocations(loc)
                 .then(r => r.json())
                 .then(data => {
-                    console.log(JSON.stringify(data, null, 4));
+                    log(JSON.stringify(data, null, 4));
                     return reply(data);
                   })
                 .catch(err => {
-                  console.log(JSON.stringify(err, null, 4));
+                  log(JSON.stringify(err, null, 4));
                   return reply({ message: 'error', data: err });
                 });
     }
@@ -37,5 +39,5 @@ server.route({
 
 /* start server */
 server.start(function() {
-    console.log('Server running at:', server.info.uri);
+    log('Server running at:', server.info.uri);
 });

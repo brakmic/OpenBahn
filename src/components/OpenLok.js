@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import bows from 'bows';
+
+const log = bows('OpenLok');
 
 export default class OpenLok extends Component {
   constructor(props){
@@ -12,18 +15,17 @@ export default class OpenLok extends Component {
     this.onLocationInput = this.onLocationInput.bind(this);
   }
   componentDidMount(){
-    console.log(`[SERVICE] ${this.props.service.name} loaded`);
+    log(`[SERVICE] ${this.props.service.name} loaded`);
   }
   search(){
     let self = this;
-    console.log(`[SEARCHING] ${this.state.location}`);
+    log(`[SEARCHING] ${this.state.location}`);
     this.state.service.getLocations(this.state.location)
                 .then(r => r.json())
                 .then(data => {
-                  console.log(`[DATA] ${JSON.stringify(data, null, 4)}`);
-
+                  log(`[DATA] ${JSON.stringify(data, null, 4)}`);
                 })
-                .catch(err => console.log(JSON.stringify(err, null, 4)));
+                .catch(err => log(JSON.stringify(err, null, 4)));
   }
   onLocationInput(e) {
     this.setState({
