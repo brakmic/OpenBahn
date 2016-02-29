@@ -48,7 +48,7 @@ Finally, you'd receive a plain JSON-structure containing the location data. The 
 
 ##### Current Status
 
-The Client is rather primitive as it only contains a very bare-bone React component and a few Bootstrap elements (button, input, panel etc.).
+The Client is rather primitive as it only contains a very bare-bones React component and a few Bootstrap elements (button, input, panel etc.).
 
 The Server implements only the <a href="http://data.deutschebahn.com/apis/fahrplan/">Location.name</a> API but soon they'll be more of them.
 
