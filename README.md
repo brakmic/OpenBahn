@@ -56,6 +56,12 @@ The Server implements only the <a href="http://data.deutschebahn.com/apis/fahrpl
 
 ##### Building & Running
 
+*Prerequisites*
+
+```
+npm install
+```
+
 *Client*
 
 ``` shell
@@ -71,6 +77,14 @@ npm run api
 ```
 
 API-Server listens on <a href="http://localhost:3000/">http://localhost:3000/</a>
+
+##### Testing
+
+<a href="https://mochajs.org/">Mocha</a> & <a href="http://chaijs.com/">Chai</a>
+
+``` shell
+npm test
+```
 
 ##### FAQ
 
