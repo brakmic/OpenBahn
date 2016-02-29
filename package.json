@@ -28,19 +28,31 @@
     "es6-promise": "^3.1.2",
     "eslint-plugin-react": "latest",
     "exports-loader": "^0.6.3",
+    "globalize-webpack-plugin": "^0.3.1",
     "hapi": "^13.0.0",
+    "html-webpack-plugin": "^2.9.0",
     "imports-loader": "^0.6.5",
     "inert": "^3.2.0",
     "isomorphic-fetch": "^2.2.1",
+    "json-loader": "^0.5.4",
     "react-hot-loader": "latest",
     "webpack": "latest",
     "webpack-dev-server": "latest",
     "whatwg-fetch": "^0.11.0"
   },
   "dependencies": {
+    "cldr": "^3.4.1",
+    "cldr-data": "^28.0.3",
     "es6-promise": "^3.1.2",
+    "fs": "0.0.2",
+    "globalize": "^1.1.1",
+    "globalize-webpack-plugin": "^0.3.1",
+    "input-moment": "^0.1.0",
     "isomorphic-fetch": "^2.2.1",
+    "less": "^2.6.0",
     "react": "latest",
-    "react-dom": "latest"
+    "react-date-picker": "^4.0.8",
+    "react-dom": "latest",
+    "react-widgets": "^3.2.0"
   }
 }

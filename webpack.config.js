@@ -5,6 +5,7 @@ var scriptsRoot   = _root + 'src/';
 var stylesRoot    = _root + 'styles/';
 var vendorScripts = scriptsRoot + 'vendor/';
 
+
 module.exports = {
   devtool: 'eval',
   entry: [
@@ -26,7 +27,10 @@ module.exports = {
   module: {
 
     loaders: [
-
+              {
+                include: /\.json$/,
+                loaders: ["json-loader"]
+              },
               {
                   test : /\.html$/, loader: 'html'
               },
@@ -62,11 +66,11 @@ module.exports = {
       'bootstrap.theme.min.css'        : vendorScripts + 'bootstrap/css/bootstrap-theme.min.css',
       'bootstrap'                      : vendorScripts + 'bootstrap/js/bootstrap.js',
       'bootstrap.min'                  : vendorScripts + 'bootstrap/js/bootstrap.min.js',
-      'metisMenu.min.css'              : stylesRoot + 'metis/metisMenu.min.css',
-      'font-awesome.min.css'           : stylesRoot + 'fontawesome/css/font-awesome.min.css',
-      'awesome-bootstrap-checkbox.css' : stylesRoot + 'awesome-bootstrap-checkbox.css',
-      'BahnService'                    : scriptsRoot + 'services/BahnService.js',
-      'OpenLok'                        : scriptsRoot + 'components/OpenLok.js'
+      'metisMenu.min.css'              : stylesRoot    + 'metis/metisMenu.min.css',
+      'font-awesome.min.css'           : stylesRoot    + 'fontawesome/css/font-awesome.min.css',
+      'awesome-bootstrap-checkbox.css' : stylesRoot    + 'awesome-bootstrap-checkbox.css',
+      'BahnService'                    : scriptsRoot   + 'services/BahnService.js',
+      'OpenLok'                        : scriptsRoot   + 'components/OpenLok.js'
 
     }
   },

@@ -49,10 +49,6 @@ export default class BahnService {
       serviceUrl = `${baseUrl}locations/${query}`;
     }
     log(`[GET LOCATIONS] ${serviceUrl}`);
-    /*return this.executeFetch(serviceUrl)
-                .then(r => r.json())
-                .then(data => console.log(`[DATA] ${data}`))
-                .catch(err => console.log(JSON.stringify(err, null, 4)));*/
     return this.executeFetch(serviceUrl);
   }
   executeFetch(serviceQuery, settings = this.settings){

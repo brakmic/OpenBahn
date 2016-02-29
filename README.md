@@ -40,7 +40,7 @@ Finally, you'd receive a plain JSON-structure containing the location data. The 
 
 ##### Client
 
-<img src="http://fs5.directupload.net/images/160229/tlpumyvq.png"/>
+<img src="http://fs5.directupload.net/images/160229/s7auqjor.png"/>
 
 ##### Local API Server
 
@@ -48,7 +48,9 @@ Finally, you'd receive a plain JSON-structure containing the location data. The 
 
 ##### Current Status
 
-The Client is rather primitive as it only contains a very bare-bones React component and a few Bootstrap elements (button, input, panel etc.).
+The Client is rather primitive as it only contains a very bare-bones React component and a few <a href="http://getbootstrap.com/">Bootstrap</a> elements (button, input, panel etc.).
+
+The Calendar Widgets are from <a href="https://jquense.github.io/react-widgets/docs/#/datetime-picker">React Widgets</a>.
 
 The Server implements only the <a href="http://data.deutschebahn.com/apis/fahrplan/">Location.name</a> API but soon they'll be more of them.
 
