@@ -1,5 +1,6 @@
 {
-  "name": "openbahn",
+  "name": "openlok",
+  "private": true,
   "version": "0.1.0",
   "description": "Web Client for Deutsche Bahn API",
   "main": "index.js",
