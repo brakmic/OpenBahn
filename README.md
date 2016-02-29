@@ -40,7 +40,7 @@ Finally, you'd receive a plain JSON-structure containing the location data. The 
 
 ##### Screenshot (Client)
 
-<img src="http://fs5.directupload.net/images/160229/xuvwrmpl.png"/>
+<img src="http://fs5.directupload.net/images/160229/kon4be4f.png"/>
 
 ##### Screenshot (Backend)
 
