@@ -26,12 +26,12 @@ This may sound unnecessarily complex but the strategy is rather simple: *a Clien
 
 The advantage is obvious: you can mock and test your API without dealing with CORS or any other implementation details.
 
-For example, the client could send a GET request querying the location 'Cologne'
+For example, the client could send a GET request querying the location 'Cologne':
 
 ``` shell
 http://localhost:3000/locations/Cologne
 ```
-which on Hapi.js side would then be translated into a server-side GET request against
+which on Hapi.js side would then be translated into a server-side GET request:
 ``` shell
 https://open-api.bahn.de/bin/rest.exe/location.name?authKey=YOUR_AUTH_KEY&lang=de&input=Cologne&format=json
 ```
