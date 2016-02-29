@@ -6,7 +6,7 @@
 ---
 A small project utilizing the <a href="http://www.bahn.de">Deutsche Bahn</a> **API** (<a href="https://en.wikipedia.org/wiki/Deutsche_Bahn">German Railway Corporation</a>)
 
-Deutsche Bahn opened some of their APIs for public consumption and this project should serve as an  API-playground.
+Deutsche Bahn opened some of their APIs for public consumption and this project should serve as an API-playground.
 
 For more detailed info on the API itself read this <a href="http://www.heise.de/newsticker/meldung/Open-Data-Deutsche-Bahn-gibt-Schnittstelle-fuer-Fahrplandaten-frei-3118919.html">article (in German)</a>
 
