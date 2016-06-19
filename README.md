@@ -1,7 +1,7 @@
 ### OpenLok :train:
 
 
-  ![alt text](http://fs5.directupload.net/images/160619/6lsaxfri.png "Germany's Rail Network")
+  ![alt text](https://s32.postimg.org/jj6vsthth/ICE_Network.png "Germany's Rail Network")
 
 ---
 A small project utilizing the <a href="http://www.bahn.de">Deutsche Bahn</a> **API** (<a href="https://en.wikipedia.org/wiki/Deutsche_Bahn">German Railway Corporation</a>)
