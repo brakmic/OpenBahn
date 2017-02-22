@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+       'fetch': 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
     })
   ],
   module: {
@@ -29,10 +29,10 @@ module.exports = {
     loaders: [
               {
                 include: /\.json$/,
-                loaders: ["json-loader"]
+                loaders: ['json-loader']
               },
               {
-                  test : /\.html$/, loader: 'html'
+                  test : /\.html$/, loader: 'html-loader'
               },
               {
                   test : /\.less$/, loader: 'style-loader!css-loader!less-loader'
@@ -49,18 +49,23 @@ module.exports = {
                   loader: 'url-loader?mimetype=application/font-woff'
               },
               {   test: /\.jpg$/,
-                  loader: "file-loader?name=[path][name].[ext]"
+                  loader: 'file-loader?name=[path][name].[ext]'
               },
               {
                 test: /\.js$/,
-                loaders: ['react-hot', 'babel'],
+                loaders: ['react-hot-loader', 'babel-loader'],
                 include: path.join(__dirname, 'src')
               },
         ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json', '.css', '.html'],
-    modulesDirectories: ['node_modules', 'bower_components'],
+    extensions: ['.js', '.jsx', '.json', '.css', '.html'],
+    // modulesDirectories: ['node_modules', 'bower_components'],
+    modules: [
+        './src',
+        './src/app',
+        './node_modules'
+    ],
     alias: {
       'app.css'                        : stylesRoot    + 'app.css',
       'bootstrap.min.css'              : vendorScripts + 'bootstrap/css/bootstrap.min.css',
@@ -75,6 +80,6 @@ module.exports = {
 
     }
   },
-  useMemoryFs: true,
-  progress: true
+  //useMemoryFs: true,
+  //progress: true
 };

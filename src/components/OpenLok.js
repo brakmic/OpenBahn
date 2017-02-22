@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import bows from 'bows';
+import * as _ from 'lodash';
+const cuid = require('cuid')
 import moment from 'moment';
 import DateTimePicker from 'react-widgets/lib/DateTimePicker';
 
@@ -12,7 +14,11 @@ export default class OpenLok extends Component {
       service : props.service,
       moment: moment(),
       location: '',
-      data: 'no data',
+      data: {
+        LocationList: {
+          StopLocation: []
+        }
+      },
       dateFrom: new Date(),
       dateTo: null
     }
@@ -28,6 +34,7 @@ export default class OpenLok extends Component {
     this.state.service.getLocations(this.state.location)
                 .then(r => r.json())
                 .then(data => {
+                  self.setState({ data: data });
                   log(`[DATA] ${JSON.stringify(data, null, 4)}`);
                 })
                 .catch(err => log(JSON.stringify(err, null, 4)));
@@ -77,7 +84,18 @@ export default class OpenLok extends Component {
                   </div>
                 </div>
               </div>
-
+              <div className="row">
+                <ul className="list-group">
+                  {
+                    _.map(this.state.data.LocationList.StopLocation, loc => {
+                           return (<a href="#" className="list-group-item" key={cuid()}>
+                              <h4 className="list-group-item-heading" key={cuid()}>{loc.name}</h4>
+                              <p className="list-group-item-text" key={cuid()}>Lat: {loc.lat} - Lon: {loc.lon}</p>
+                           </a>)
+                     })
+                  };
+                </ul>
+              </div>   
           </div>
 
         <div className="panel-footer"></div>
