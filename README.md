@@ -20,7 +20,7 @@ The API Descriptions can be found [here](http://data.deutschebahn.com/apis/fahrp
 
 The Frontend is built with [React.js](https://facebook.github.io/react/) and supports hot-reloading via [WebPack](https://webpack.github.io/). More info regarding hot-reloading of React components can be found [here](https://gaearon.github.io/react-hot-loader/getstarted/).
 
-The Backend is based on [>Hapi.js](http://hapijs.com/) which is my favorite **node web server**. The Frontend uses this backend to avoid problems with CORS. Therefore, the App executes no direct calls against the real DB-API but instead against Hapi.js that is configured *to accept CORS*.
+The Backend is based on [Hapi.js](http://hapijs.com/) which is my favorite **node web server**. The Frontend uses this backend to avoid problems with CORS. Therefore, the App executes no direct calls against the real DB-API but instead against Hapi.js that is configured *to accept CORS*.
 
 There's a special class called *BahnService** that's being used by both client and server to make API calls. *BahnService* runs either in _local_ or _remote_ mode. The Client runs on _local_ to dispatch the API calls to the local Hapi.js instance which in turn uses the _remote_ instance of *BahnService* to access the real [DB API](http://data.deutschebahn.com/).
 
