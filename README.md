@@ -4,13 +4,15 @@
   ![alt text](https://s32.postimg.org/jj6vsthth/ICE_Network.png "Germany's Rail Network")
 
 ---
-A small project utilizing the <a href="http://www.bahn.de">Deutsche Bahn</a> **API** (<a href="https://en.wikipedia.org/wiki/Deutsche_Bahn">German Railway Corporation</a>)
+A small project utilizing the [Deutsche Bahn API](http://www.bahn.de)
+
+[Wikipedia entry](https://en.wikipedia.org/wiki/Deutsche_Bahn) on DB (*German Railway Corporation*)
 
 Deutsche Bahn opened some of their APIs for public consumption and this project should serve as an API-playground.
 
 For more detailed info on the API itself read [this article](http://www.heise.de/newsticker/meldung/Open-Data-Deutsche-Bahn-gibt-Schnittstelle-fuer-Fahrplandaten-frei-3118919.html) (in German)</a>
 
-The Homepage of the API is located <a href=""http://data.deutschebahn.com/index.html>here</a>.
+The Homepage of the API is located [here](http://data.deutschebahn.com/index.html).
 
 The API Descriptions can be found [here](http://data.deutschebahn.com/apis/fahrplan/Fpl-API-Doku-Open-Data-BETA-0_81.pdf) (pdf, in German)</a>
 
